@@ -1,0 +1,116 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin": "3 3 0 3",
+  "modules-left": [
+    "custom/power",
+    "hyprland/workspaces",
+    "cpu",
+    "memory",
+    "gamemode"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "backlight", "battery", "network", "tray"],
+
+  "custom/power": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "format": "{name}{windows}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "format-window-separator": "",
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "class<zen-browser>": " ",
+      "class<nemo>": " ",
+      "class<org.gnome.FileRoller>": " ",
+      "class<kitty>": " ",
+      "class<code>": " ",
+      "class<steam>": " 󰓓",
+      "class<steam> title<好友列表>": " ",
+      "class<vlc>": " 󰕼",
+      "class<eog>": " ",
+      "class<google-chrome>": " ",
+      "class<wechat>": " ",
+      "class<netease-cloud-music>": " ",
+      "class<firefox>": " ",
+      "class<org.telegram.desktop>": " ",
+      "class<neovide>": " "
+    }
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "states": {
+      "warning": 80,
+      "critical": 90
+    }
+  },
+  "memory": {
+    "interval": 1,
+    "format": " {percentage}%",
+    "tooltip-format": "{used:0.1f}GiB",
+    "states": {
+      "warning": 80,
+      "critical": 90
+    }
+  },
+  // "gamemode": {
+  //   "format": "",
+  //   "format-alt": "",
+  //   "tooltip-format": "已启用游戏模式：{count}"
+  // },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%T}",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{icon} {volume}%",
+    "tooltip-format": "{icon} {desc} // {volume}%",
+    "format-muted": "󰖁 Muted",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+	"scroll-step": 1,
+    "on-click": "pamixer --toggle-mute",
+    "on-click-right": "pavucontrol"
+  },
+  "backlight": {
+    "device": "amd_backlight",
+    "on-scroll-up": "brightnessctl s 1%+",
+    "on-scroll-down": "brightnessctl s 1%-",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
+    "tooltip": false
+  },
+  "battery": {
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-full": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "tooltip": false
+  },
+  "network": {
+    "format-disconnected": "󰯡 disconnect",
+    "format-ethernet": "󰀂 {ifname}",
+    "format-linked": "󰖪 {essid}",
+    "format-wifi": "󰖩 {essid}",
+    "tooltip": true,
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 6,
+    "reverse-direction": true
+  }
+}

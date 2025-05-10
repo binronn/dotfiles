@@ -1,0 +1,7 @@
+[2025-05-09 14:01:54.046] [info] Using configuration file /home/byron/.config/waybar/config.jsonc
+[2025-05-09 14:01:54.047] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2025-05-09 14:01:54.047] [info] Using CSS file /home/byron/.config/waybar/style.css
+[2025-05-09 14:01:54.052] [info] Hyprland IPC starting
+[2025-05-09 14:01:54.052] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-05-09 14:01:54.052] [info] Registering for Hyprland's 'windowtitle' events because a user-defined window rewrite rule uses the 'title' field.
+[2025-05-09 14:01:54.184] [info] Bar configured (width: 1274, height: 31) for output: eDP-1
