@@ -62,8 +62,8 @@ tooltip label,
 }
 
 #workspaces button:hover {
-  background: #bb9af7;
-  color: #1a1b26;
+  background: #add8e6; /* 浅蓝色 */
+  color: #333333;     /* 深灰色（与浅蓝形成对比，但不过于明亮） */
   border-radius: 15px;
 }
 
