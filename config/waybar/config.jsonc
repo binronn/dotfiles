@@ -115,7 +115,11 @@
   "tray": {
 	  "icon-size": 16,
 	  "spacing": 6,
-	  "reverse-direction": true
+	  "reverse-direction": true,
+	  "show-passive-items": true,
+	  "filter": [
+		  "!Fcitx",
+	  ]
   },
   "temperature": {
 	  "critical-threshold": 80,
