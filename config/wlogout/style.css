@@ -29,7 +29,7 @@ by Stephan Raabe (2023)
 
 window {
 	/* background-size: #333333; */
-	background-color: #666666;
+	background-color: #333333;
 	/* font-size: 16pt; */
 	/* color: #ffffff; */
 }
@@ -38,7 +38,7 @@ button {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 20%;
-	background-color: #888888;
+	background-color: #555555;
 	animation: gradient_f 20s ease-in infinite;
 	border-radius: 80px; /* Increased border radius for a more rounded look */
 	border:0px;
