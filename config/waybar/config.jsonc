@@ -92,6 +92,7 @@
 	"on-scroll-down": "brightnessctl s 1%-",
 	"format": "{icon} {percent}%",
 	"format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
+	"on-click": "", // 有这个选项，鼠标移动到按钮上会变成手的形状
 	"tooltip": false
   },
   "battery": {
