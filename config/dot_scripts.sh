@@ -195,6 +195,80 @@ Theme=macOS-dark
 EOF
 
 
+################
+### Enable deep sleep (hibernate)
+################
+################
+
+read -r -p "Enable deep sleep(hibernation)？ (y/N): " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+	## 创建swap文件
+	echo 'Make /swapfile_hibernation file...'
+	sudo fallocate -l 8G /swapfile_hibernation 
+	sudo chmod 600 /swapfile_hibernation
+	sudo mkswap /swapfile_hibernation
+	sudo swapon /swapfile_hibernation
+
+	# ## 挂载swap文件
+	sudo tee -a /etc/fstab <<EOF
+
+	/swapfile_hibernation none swap sw 0 0
+	EOF
+
+	echo ''
+	echo 'Enable resume hook ...'
+
+	MKINITCPIO_CFG="/etc/mkinitcpio.conf.b"
+	sudo cp $MKINITCPIO_CFG /etc/mkinitcpio.conf.bak
+	echo -e 'Created backfile for /etc/mkinitcpio.conf: /etc/mkinitcpio.conf.bak\n'
+
+	if [ $? -eq 0 ]; then
+
+		if [ ! -f "$MKINITCPIO_CFG" ]; then
+			echo "错误：文件 $MKINITCPIO_CFG 不存在。"
+			exit 1
+		fi
+
+		HOOKS_LINE=$(grep "^HOOKS=" "$MKINITCPIO_CFG")
+		if [ -z "$HOOKS_LINE" ]; then
+			echo "[Deep sleep make filed.] 错误：在文件 $MKINITCPIO_CFG 中找不到以 HOOKS= 开头的行。"
+		else
+			echo -e "\nFinded HOOKS line: \n$HOOKS_LINE"
+
+			if [[ "$HOOKS_LINE" == *" resume "* ]]; then
+				sudo mkinitcpio -P
+				echo -e "Deep sleep make successed.\n"
+			else
+				if [[ "$HOOKS_LINE" =~ "fsck" ]]; then
+					EW_HOOKS_LINE=$(echo "$HOOKS_LINE" | sed 's/fsck/resume fsck/')
+
+					# 使用 printf 对 HOOKS_LINE 和 EW_HOOKS_LINE 进行转义，防止正则表达式特殊字符的影响
+					ESCAPED_HOOKS_LINE=$(printf '%s\n' "$HOOKS_LINE" | sed 's:[][\/.^$*]:\\&:g')
+					ESCAPED_EW_HOOKS_LINE=$(printf '%s\n' "$EW_HOOKS_LINE" | sed 's:[\/&]:\\&:g')
+
+					sudo sed -i "s/$ESCAPED_HOOKS_LINE/$ESCAPED_EW_HOOKS_LINE/" "$MKINITCPIO_CFG"
+
+					if [ $? -eq 0 ]; then
+						echo 'Changed HOOKS line'
+						grep "^HOOKS=" "$MKINITCPIO_CFG" # 显示修改后的行
+						echo -e '\n'
+						# sudo mkinitcpio -P
+						echo -e "Deep sleep make successed.\n"
+					else
+						echo "[Deep sleep make filed.] sed rewrite $MKINITCPIO_CFG failed."
+						echo "[Deep sleep make filed.] 请手动检查并修改文件 $MKINITCPIO_CFG"
+					fi
+				else
+					echo "[Deep sleep make filed.] 错误：在 HOOKS 行中找不到 'fsck' hook，无法在其前面添加 'resume'。"
+					echo "[Deep sleep make filed.] 请手动检查并修改文件 $MKINITCPIO_CFG"
+				fi
+			fi
+		fi
+	else
+		echo "[Deep sleep make filed.] Cann't create swapfile."
+	fi
+fi
+
 
 ################################################
 ### SDDM Autologin
