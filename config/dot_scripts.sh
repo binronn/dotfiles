@@ -67,7 +67,7 @@ sudo pacman -Sy --noconfirm networkmanager network-manager-applet
 #####################
 ### Bluetooh manager 
 #####################
-# add hyperland.conf exec-once = exec-once = blueman-applet
+# add hyperland.conf exec-once = blueman-applet
 #####################
 sudo pacman -Sy --noconfirm bluez bluez-utils blueman
 sudo systemctl enable bluetooth.service
@@ -91,6 +91,13 @@ sudo pacman -Sy --noconfirm wofi
 ################
 sudo pacman -Sy --noconfirm hyprlock
 
+################
+### Hyprpaper 
+################
+# config in .config/hypr/hyperpaper.conf 
+# add hyprland.conf exec-once = hyperpaper --config $HOME/.config/hypr/hyprpaper.conf
+################
+sudo pacman -Sy --noconfirm hyprpaper
 
 ################
 ### screen_shot
@@ -143,7 +150,7 @@ yay -Sy --noconfirm wlogout
 # exec-once = swayidle -w timeout 300 'brightnessctl s 10 && hyprlock'
 # Auto lockscreen
 ################
-sudo pacman -S swayidle
+sudo pacman -Sy --noconfirm swayidle
 
 
 ################

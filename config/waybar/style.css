@@ -6,7 +6,11 @@
 	min-height: 0;
 }
 
-window#waybar,
+
+window#waybar {
+	background: rgba(0, 0, 0, 0.0);
+}
+
 tooltip {
 	background: rgba(0, 0, 0, 0.5);
 	padding: 4px 8px; /* 可选：增加内边距使外观更饱满 */
