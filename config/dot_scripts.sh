@@ -231,7 +231,7 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 
 		HOOKS_LINE=$(grep "^HOOKS=" "$MKINITCPIO_CFG")
 		if [ -z "$HOOKS_LINE" ]; then
-			echo "[Deep sleep make filed.] 错误：在文件 $MKINITCPIO_CFG 中找不到以 HOOKS= 开头的行。"
+			echo "[Deep sleep make fail.] 错误：在文件 $MKINITCPIO_CFG 中找不到以 HOOKS= 开头的行。"
 		else
 			echo -e "\nFinded HOOKS line: \n$HOOKS_LINE"
 
@@ -255,12 +255,12 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 						# sudo mkinitcpio -P
 						echo -e "Deep sleep make successed.\n"
 					else
-						echo "[Deep sleep make filed.] sed rewrite $MKINITCPIO_CFG failed."
-						echo "[Deep sleep make filed.] 请手动检查并修改文件 $MKINITCPIO_CFG"
+						echo "[Deep sleep make fail.] sed rewrite $MKINITCPIO_CFG failed."
+						echo "[Deep sleep make fail.] 请手动检查并修改文件 $MKINITCPIO_CFG"
 					fi
 				else
-					echo "[Deep sleep make filed.] 错误：在 HOOKS 行中找不到 'fsck' hook，无法在其前面添加 'resume'。"
-					echo "[Deep sleep make filed.] 请手动检查并修改文件 $MKINITCPIO_CFG"
+					echo "[Deep sleep make fail.] 错误：在 HOOKS 行中找不到 'fsck' hook，无法在其前面添加 'resume'。"
+					echo "[Deep sleep make fail.] 请手动检查并修改文件 $MKINITCPIO_CFG"
 				fi
 			fi
 		fi
