@@ -24,7 +24,7 @@
 }
 {
     "label" : "shutdown",
-    "action" : "shutdown",
+    "action" : "poweroff",
     "text" : "Power Off",
     "keybind" : "s"
 }

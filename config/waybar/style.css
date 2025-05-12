@@ -1,19 +1,19 @@
 * {
-  font-family: "Cascadia Code";
-  /* font-weight: bold; */
-  font-size: 13px;
-  border-radius: 8px; /* 增加默认圆角 */
-  min-height: 0;
+	font-family: "Cascadia Code";
+	/* font-weight: bold; */
+	font-size: 16px;
+	border-radius: 15px; /* 增加默认圆角 */
+	min-height: 0;
 }
 
 window#waybar,
 tooltip {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 12px; /* 为整个 Waybar 添加更大圆角 */
-  padding: 4px 8px; /* 可选：增加内边距使外观更饱满 */
+	background: rgba(0, 0, 0, 0.5);
+	padding: 4px 8px; /* 可选：增加内边距使外观更饱满 */
 }
 
 tooltip label,
+#temperature,
 #custom-power,
 #workspaces,
 #cpu,
@@ -25,75 +25,68 @@ tooltip label,
 #network,
 #battery,
 #tray {
-  color: #a9b1d6;
-  font-size: 13px;
-  padding: 0px 10px; /* 增大内边距 */
-  margin: 2px;
-  border-radius: 20px; /* 添加圆角到各个模块 */
-  background-color: #2a2e3c; /* 添加背景颜色 */
-  transition: all 0.3s ease; /* 添加平滑过渡效果 */
+	color: #a9b1d6;
+	font-size: 13px;
+	padding: 0px 10px; /* 增大内边距 */
+	margin: 2px;
+	background-color: #2a2e3c; /* 添加背景颜色 */
+	transition: all 0.3s ease; /* 添加平滑过渡效果 */
 }
 
 #custom-power {
-  padding: 4px 20px; /* 增大内边距 */
-  margin-left: 10px;
+	background-color: #A64902;
+	padding: 4px 12px; /* 增大内边距 */
+	margin-left: 10px;
 }
 
 #tray {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 
 #workspaces button {
-  font-size: 13px;
-  background: #1a1b26;
-  color: #a9b1d6;
-  margin: 2px 2px;
-  padding: 2px 10px;
-  border-radius: 18px; /* 更大的圆角 */
-  transition: all 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+	background: #1a1b26;
+	color: #a9b1d6;
+	margin: 2px 2px;
+	padding: 2px 10px;
+	transition: all 0.3s cubic-bezier(0, 0.55, 0.45, 1);
 }
 
 #workspaces button.active {
-  background: #7aa2f7;
-  color: #1a1b26;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 15px;
+	background: #7aa2f7;
+	color: #1a1b26;
 }
 
 #workspaces button:hover {
-  background: #add8e6; /* 浅蓝色 */
-  color: #333333;     /* 深灰色（与浅蓝形成对比，但不过于明亮） */
-  border-radius: 15px;
+	background: #add8e6; /* 浅蓝色 */
+	color: #333333;     /* 深灰色（与浅蓝形成对比，但不过于明亮） */
+	border-radius: 30px;
 }
 
 #network.disconnected,
 #battery.discharging,
 #battery.charging {
-  color: #ff9e64;
-  border-radius: 6px;
+	color: #ff9e64;
+	border-radius: 15px;
 }
 
 #battery.critical:not(.charging) {
-  color: #f7768e;
-  border-radius: 6px;
+	color: #f7768e;
+	border-radius: 15px;
 }
 
 .warning,
 .critical,
 .urgent {
-  animation-name: blink_red;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  border-radius: 6px;
+	animation-name: blink_red;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 @keyframes blink_red {
-  to {
-    background-color: #f7768e;
-    color: #1a1b26;
-    border-radius: 6px;
-  }
+	to {
+		background-color: #f7768e;
+		color: #1a1b26;
+	}
 }
