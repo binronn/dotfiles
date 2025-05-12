@@ -13,13 +13,13 @@
 {
     "label" : "suspend",
     "action" : "(hyprlock --immediate&); sleep 3; systemctl suspend",
-    "text" : "Suspend",
+    "text" : "Suspend(Mem)",
     "keybind" : "u"
 }
 {
     "label" : "hibernate",
     "action" : "(hyprlock --immediate&); sleep 3; systemctl hibernate",
-    "text" : "Deep sleep",
+    "text" : "Sleep(Disk)",
     "keybind" : "q"
 }
 {
