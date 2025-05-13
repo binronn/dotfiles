@@ -5,9 +5,8 @@
 	"modules-left": [
 		"custom/power",
 		"clock",
-	// "hyprland/workspaces",
-	"cpu",
-	"memory",
+		"cpu",
+		"memory",
 	],
   // "modules-center": ["clock"],
   "modules-center": ["hyprland/workspaces"],
@@ -68,11 +67,17 @@
   },
 
   "clock": {
-	  // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	  "format-alt": "{:%F %T}",
-	  "interval": 1,
-	  "tooltip": false
-  },
+    "interval": 60,
+    "format": "{:%H:%M}",
+    "max-length": 25
+},
+
+  // "clock": {
+	 //  // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	 //  "format-alt": "{:%F %T}",
+	 //  "interval": 1,
+	 //  "tooltip": false
+  // },
 
   "pulseaudio": {
 	  "format": "{icon} {volume}%",
@@ -117,7 +122,7 @@
 	  "icon-size": 16,
 	  "spacing": 6,
 	  "reverse-direction": true,
-	  "show-passive-items": true,
+	  // "show-passive-items": true,
 	  "filter": [
 		  "!Fcitx",
 	  ]
