@@ -37,6 +37,14 @@ tooltip label,
 	transition: all 0.3s ease; /* 添加平滑过渡效果 */
 }
 
+
+#clock {
+	/* background-color: #A64902; */
+	color: #c8c8c8;
+	padding: 4px 12px; /* 增大内边距 */
+	margin-left: 10px;
+}
+
 #custom-power {
 	background-color: #A64902;
 	padding: 4px 12px; /* 增大内边距 */
@@ -67,7 +75,11 @@ tooltip label,
 }
 
 #network.disconnected,
-#battery.discharging,
+#battery.discharging {
+	color: #ff9e64;
+	border-radius: 15px;
+}
+
 #battery.charging {
 	color: #ff9e64;
 	border-radius: 15px;
