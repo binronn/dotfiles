@@ -41,12 +41,14 @@ tooltip label,
 #clock {
 	/* background-color: #A64902; */
 	color: #c8c8c8;
+	background-color: #2a2e3c; /* 添加背景颜色 */
 	padding: 4px 12px; /* 增大内边距 */
 	margin-left: 10px;
 }
 
 #custom-power {
 	background-color: #A64902;
+	color: #c8c8c8;
 	padding: 4px 12px; /* 增大内边距 */
 	margin-left: 10px;
 }
