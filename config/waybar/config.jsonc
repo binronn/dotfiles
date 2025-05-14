@@ -19,6 +19,7 @@
   ],
 
   "custom/power": {
+	  // "format": "<span size='12000' baseline_shift='5300'></span>",
 	  "format": "",
 	  "on-click": "wlogout",
 	  "tooltip": false
@@ -111,7 +112,7 @@
 	  "format": "<span size='13000'>{icon}</span> <span size='9200' baseline_shift='2000'>{capacity}%</span>",
 	  "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 	  "format-full": "<span size='13000'>{icon}</span> <span size='9200' baseline_shift='2000'>{capacity}%</span>",
-	  "format-charging": "<span size='13000'>󰂄</span> <span size='9200' baseline_shift='2000'>{capacity}%</span>",
+	  "format-charging": "<span size='13000'>⚡</span> <span size='9200' baseline_shift='2000'>{capacity}%</span>",
 	  // "format": "{icon} {capacity}%",
 	  // "format-full": "{icon} {capacity}%",
 	  // "format-charging": "󰂄 {capacity}%",

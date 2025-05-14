@@ -12,7 +12,7 @@ window#waybar {
 }
 
 tooltip {
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 1);
 	padding: 4px 8px; /* 可选：增加内边距使外观更饱满 */
 }
 
@@ -47,9 +47,10 @@ tooltip label,
 }
 
 #custom-power {
+	font-size: 13px;
 	background-color: #A64902;
 	color: #c8c8c8;
-	padding: 4px 12px; /* 增大内边距 */
+	padding: 0px 12px; /* 增大内边距 */
 	margin-left: 10px;
 }
 
