@@ -1,14 +1,21 @@
 * {
 	font-family: "Cascadia Code";
 	/* font-weight: bold; */
-	font-size: 16px;
+	font-size: 13px;
 	border-radius: 15px; /* 增加默认圆角 */
-	min-height: 0;
+	min-height: 20px;
 }
 
 
 window#waybar {
 	background: rgba(0, 0, 0, 0.0);
+    /* background-color: #3d3540; */
+    /* border-bottom: 2px dashed #a678d3; */
+    /* border-top: 2px dashed #a678d3; */
+    /* padding-top: 1px; */
+    /* color: #a678d3;  */
+    /* transition-property: background-color; */
+    /* transition-duration: .5s; */
 }
 
 tooltip {
@@ -30,7 +37,6 @@ tooltip label,
 #battery,
 #tray {
 	color: #a9b1d6;
-	font-size: 13px;
 	padding: 0px 10px; /* 增大内边距 */
 	margin: 2px;
 	background-color: #2a2e3c; /* 添加背景颜色 */
@@ -47,7 +53,7 @@ tooltip label,
 }
 
 #custom-power {
-	font-size: 13px;
+	border-radius: 50%;
 	background-color: #A64902;
 	color: #c8c8c8;
 	padding: 0px 12px; /* 增大内边距 */

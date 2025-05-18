@@ -76,8 +76,9 @@
   "clock": {
     "interval": 60,
     "format": "{:%H:%M}",
+	"tooltip-format": "{:%F %T}",
     "max-length": 25,
-	"tooltip": false
+	"tooltip": true
 },
 
   // "clock": {
