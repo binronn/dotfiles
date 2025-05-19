@@ -46,11 +46,11 @@
 		  "class<netease-cloud-music>": " ",
 		  "class<AlgerMusicPlayer>": " ",
 		  "class<firefox>": " ",
-		  "class<org.telegram.desktop>": " ", // 
+		  "class<org.telegram.desktop>": " ", // 
 		  "title<IDA v.*>": " ",
-		  "class<test>": " ",
 		  "class<localsend>": " ",
 		  "title<FreeRDP: 127.0.0.1|vim6k>": " ",
+		  "class<gemini|qwen|deepseek>": " ", //  󰋞
 		  "class<neovide>": " ",
 		  "title<nvim.*|vim.*> class<kitty>": " "
 	  }
