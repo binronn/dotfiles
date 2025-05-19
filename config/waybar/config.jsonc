@@ -126,10 +126,10 @@
 	  "tooltip": false
   },
   "network": {
-	  "format-ethernet": "<span size='13000'>󰯡</span> <span size='9200' baseline_shift='2000'>{disconnect}%</span>",
-	  "format-ethernet": "<span size='13000'>󰀂</span> <span size='9200' baseline_shift='2000'>{ifname}%</span>",
-	  "format-linked": "<span size='13000'>󰖪</span> <span size='9200' baseline_shift='2000'>{essid}%</span>",
-	  "format-wifi": "<span size='13000'>󰖩</span> <span size='9200' baseline_shift='2000'>{essid}%</span>",
+	  "format-ethernet": "<span size='13000'>󰯡</span> <span size='9200' baseline_shift='2000'>{disconnect}</span>",
+	  "format-ethernet": "<span size='13000'>󰀂</span> <span size='9200' baseline_shift='2000'>{ifname}</span>",
+	  "format-linked": "<span size='13000'>󰖪</span> <span size='9200' baseline_shift='2000'>{essid}</span>",
+	  "format-wifi": "<span size='13000'>󰖩</span> <span size='9200' baseline_shift='2000'>{essid}</span>",
 	  "tooltip": true,
   },
   "tray": {
