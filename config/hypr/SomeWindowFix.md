@@ -11,3 +11,8 @@ Append 'Exec = google-chrome-stable' end: -enable-features=UseOzonePlatform --oz
 /usr/share/applications/wechat.desktop
 Append 'Exec = ': env 'QT_QPA_PLATFORM=wayland;xcb' QT_SCALE_FACTOR=1.0 GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx 
 
+# fix 010Editor window
+### Edit these file:
+/usr/share/applications/010editor.desktop
+Append 'Exec = ': env QT_QPA_PLATFORM=xcb 
+
