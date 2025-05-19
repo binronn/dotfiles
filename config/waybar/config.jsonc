@@ -56,7 +56,6 @@
 	  }
   },
   "cpu": {
-	  "interval": 1,
 	  "format": "<span size='13000'></span> <span size='9200' baseline_shift='2000'>{usage}%</span>",
 	  "states": {
 		  "warning": 80,
@@ -64,7 +63,6 @@
 	  }
   },
   "memory": {
-	  "interval": 1,
 	  "format": "<span size='13000'></span> <span size='9200' baseline_shift='2000'>{percentage}%</span>",
 	  "tooltip-format": "{used:0.1f}GiB",
 	  "states": {

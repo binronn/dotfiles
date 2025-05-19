@@ -1,5 +1,5 @@
 
-# fix chrome fcitx chinese
+# fix [chrome/p3x-onenote]fcitx chinese
 ### Edit these file:
 ### /usr/share/applications/com.google.Chrome.desktop
 /usr/share/applications/google-chrome.desktop
