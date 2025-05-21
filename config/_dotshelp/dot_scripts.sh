@@ -46,6 +46,12 @@ sudo pacman -Sy --noconfirm kitty
 ################################
 sudo pacman -Sy --noconfirm thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler
 
+################
+### 监听 hyprland 消息内容，如显示器热插拔
+################
+# add hyperland.conf exec-once = nm-applet --indicator
+################
+sudo pacman -Sy --noconfirm socat
 
 ################
 ### Notify ui ##
