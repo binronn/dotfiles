@@ -43,3 +43,12 @@ border-radius: 10;
 background-color: #3b4252;
 border-radius: 10;
 }
+
+
+#entry {
+  border-radius: 10px;
+}
+
+#entry:hover {
+  border-radius: 10px;
+}
