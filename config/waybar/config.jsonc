@@ -41,18 +41,25 @@
 		  "class<steam> title<好友列表>": " ",
 		  "class<vlc>": " 󰕼",
 		  "class<eog>": " ",
-		  "class<google-chrome>": " ", // 
+		  "class<google-chrome>": " ", // 
 		  "class<wechat>": " ",
 		  "class<netease-cloud-music>": " ",
 		  "class<AlgerMusicPlayer>": " ",
 		  "class<firefox>": " ",
-		  "class<org.telegram.desktop>": " ", // 
-		  "title<IDA v.*>": " ",
+		  "class<org.telegram.desktop>": " ", // 
+		  "title<IDA v.*>": " ",
 		  "class<localsend>": " ",
-		  "title<FreeRDP: 127.0.0.1|vim6k>": " ",
-		  "class<gemini|qwen|deepseek>": " ", //  󰋞
+		  "title<FreeRDP: 127.0.0.1|vim6k|nvid6k>": " ",
+		  "class<gemini|qwen|deepseek>": " 󰚩", //  󰋞 
+		  "class<android-studio>": " ", //  󰀲
+		  // "class<010 Editor>": " ",  // 添加010editor图标
+		  "class<pycharm>": " ",
+		  "class<teams>": " ",
+		  "class<spotify>": " ",
+		  "class<QQ|qq>": " ",
 		  "class<neovide>": " ",
-		  "title<nvim.*|vim.*> class<kitty>": " "
+		  "title<nvim.*|vim.*> class<kitty>": " ",
+		  "title<vim> class<kitty>": " "
 	  }
   },
   "cpu": {
@@ -110,6 +117,7 @@
 	"tooltip": false
   },
   "battery": {
+	  "interval": 10,
 	  "states": {
 		  "warning": 20,
 		  "critical": 10
@@ -135,9 +143,9 @@
 	  "spacing": 6,
 	  "reverse-direction": true,
 	  // "show-passive-items": true,
-	  "filter": [
-		  "!Fcitx",
-	  ]
+	  // "filter": [
+		 //  "!Fcitx",
+	  // ]
   },
   "temperature": {
 	  "critical-threshold": 80,

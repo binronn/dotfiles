@@ -36,13 +36,12 @@ if echo "$CONNECTED_MONITORS" | grep -q "$EXTERNAL_MONITOR"; then
     # 禁用主显示器
     hyprctl keyword monitor "$MAIN_MONITOR,disable"
 
-	hyprctl keyword monitor "$EXTERNAL_MONITOR,$EXTERNAL_MONITOR_CONFIG"
+	sleep 5
 	echo 'Xft.dpi:0' | xrdb -merge -
 
-else
+# else
     # 启用主显示器，并应用其默认配置
     # hyprctl keyword monitor "$MAIN_MONITOR,$MAIN_MONITOR_CONFIG"
-	echo 'Xft.dpi:145' | xrdb -merge -
 fi
 
 # 重新加载 Hyprland 配置以确保更改生效（可选，但推荐）

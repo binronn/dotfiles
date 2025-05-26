@@ -84,7 +84,7 @@ tooltip label,
 }
 
 #network.disconnected,
-#battery.discharging {
+#battery.warning:not(.charging) {
 	color: #ff9e64;
 	border-radius: 15px;
 }
@@ -99,8 +99,12 @@ tooltip label,
 	border-radius: 15px;
 }
 
-.warning,
-.critical,
+/* #battery.warning:not(.charging), */
+#cpu.warning,
+#memory.warning,
+#cpu.critical,
+#memory.critical,
+#battery.critical:not(.charging),
 .urgent {
 	animation-name: blink_red;
 	animation-duration: 1s;

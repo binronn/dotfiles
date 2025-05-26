@@ -106,6 +106,14 @@ sudo pacman -Sy --noconfirm hyprlock
 sudo pacman -Sy --noconfirm hyprpaper
 
 ################
+### Hyprsunset 蓝光过滤工具 
+################
+# add hyprland.conf exec-once = hyprsunset
+# usage: hyprctl hyprsunset temperature 3000
+################
+sudo pacman -Sy --noconfirm hyprpaper
+
+################
 ### screen_shot
 ################
 # /usr/bin/grimshot copy area

@@ -14,6 +14,7 @@ ModifierOnlyKeyTimeout=250
 
 [Hotkey/TriggerKeys]
 0=Shift+Shift_L
+1=Shift+Shift_R
 
 [Hotkey/EnumerateGroupForwardKeys]
 0=Super+space
@@ -67,8 +68,6 @@ OverrideXkbOption=False
 CustomXkbOption=
 # Force Enabled Addons
 EnabledAddons=
-# Force Disabled Addons
-DisabledAddons=
 # Preload input method to be used by default
 PreloadInputMethod=True
 # 允许在密码框中使用输入法
@@ -77,4 +76,8 @@ AllowInputMethodForPassword=False
 ShowPreeditForPassword=False
 # 保存用户数据的时间间隔（以分钟为单位）
 AutoSavePeriod=30
+
+[Behavior/DisabledAddons]
+0=chttrans
+1=quickphrase
 
