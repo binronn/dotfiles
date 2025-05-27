@@ -150,23 +150,19 @@ tooltip label,
 #workspaces button:hover {
 	background: #add8e6; /* 浅蓝色 */
 	color: #333333;     /* 深灰色（与浅蓝形成对比，但不过于明亮） */
-	border-radius: 30px;
 }
 
 #network.disconnected,
 #battery.warning:not(.charging) {
 	color: #ff9e64;
-	border-radius: 15px;
 }
 
 #battery.charging {
 	color: #90f295;
-	border-radius: 15px;
 }
 
 #battery.critical:not(.charging) {
 	color: #f7768e;
-	border-radius: 15px;
 }
 
 /* #battery.warning:not(.charging), */
@@ -176,16 +172,18 @@ tooltip label,
 #memory.critical,
 #battery.critical:not(.charging),
 .urgent {
-	animation-name: blink_red;
+	animation-name: blink_text;
 	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 }
 
-@keyframes blink_red {
+@keyframes blink_text {
+    from {
+        color: #a9b1d6; /* 从原始颜色开始 */
+    }
 	to {
-		background-color: #f7768e;
-		color: #1a1b26;
+		color: #f7768e;
 	}
 }
