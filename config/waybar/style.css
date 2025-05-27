@@ -44,6 +44,72 @@ tooltip label,
 }
 
 
+#cpu:hover, #memory:hover, #pulseaudio:hover, #backlight:hover {
+    background-color: rgba(60, 60, 80, 0.8);
+}
+
+/* ----------------------------------------------------------------------------------------------------
+ * 使pulseaudio + backlight + battery + network 看起来像一个整体
+ * ----------------------------------------------------------------------------------------------------
+ */
+
+#backlight, #battery {
+    border-top-right-radius: 0;    /* 右上角直角 */
+    border-bottom-right-radius: 0; /* 右下角直角 */
+    border-top-left-radius: 0;    /* 左上角直角 */
+    border-bottom-left-radius: 0; /* 左下角直角 */
+    margin-left: 0; /* 左侧无间距 */
+    margin-right: 0; /* 右侧无间距 */
+	border-right: none;
+}
+
+#pulseaudio {
+    border-top-right-radius: 0;    /* 右上角直角 */
+    border-bottom-right-radius: 0; /* 右下角直角 */
+    margin-right: 0; /* 与 backlight 模块无间距 */
+    padding-right: 8px; /* 稍微减少右边内边距，使其更紧凑 */
+    margin-left: 4px; /* CPU 模块左侧与前一个模块的间距 */
+	border-right: none;
+}
+
+#network {
+    border-top-left-radius: 0;    /* 左上角直角 */
+    border-bottom-left-radius: 0; /* 左下角直角 */
+    margin-left: 0; /* 与 battery 模块无间距 */
+    padding-left: 8px; /* 稍微减少左边内边距，使其更紧凑 */
+    margin-right: 4px; /* network 模块右侧与下一个模块的间距 */
+	border-left: none;
+}
+
+/* ----------------------------------------------------------------------------------------------------
+ * 使 CPU + MEMORY 看起来像一个整体
+ * ----------------------------------------------------------------------------------------------------
+ */
+/* 确保两者背景颜色一致，看起来像一个整体 */
+#cpu, #memory {
+    border: 0px solid #4c4f69;  /* 添加边框 */
+}
+
+/* 针对 CPU 模块的样式，使其成为容器的左侧部分 */
+#cpu {
+    border-top-right-radius: 0;    /* 右上角直角 */
+    border-bottom-right-radius: 0; /* 右下角直角 */
+    margin-right: 0; /* 与 Memory 模块无间距 */
+    padding-right: 8px; /* 稍微减少右边内边距，使其更紧凑 */
+    margin-left: 4px; /* CPU 模块左侧与前一个模块的间距 */
+	border-right: none;
+}
+
+/* 针对 Memory 模块的样式，使其成为容器的右侧部分 */
+#memory {
+    border-top-left-radius: 0;    /* 左上角直角 */
+    border-bottom-left-radius: 0; /* 左下角直角 */
+    margin-left: 0; /* 与 CPU 模块无间距 */
+    padding-left: 8px; /* 稍微减少左边内边距，使其更紧凑 */
+    margin-right: 4px; /* Memory 模块右侧与下一个模块的间距 */
+	border-left: none;
+}
+
 #clock {
 	/* background-color: #A64902; */
 	color: #c8c8c8;
@@ -53,11 +119,15 @@ tooltip label,
 }
 
 #custom-power {
-	border-radius: 50%;
+	border-radius: 100%;
+	min-width: 24px;
+	min-height: 24px;
+	padding: 0;
 	background-color: #A64902;
 	color: #c8c8c8;
-	padding: 0px 12px; /* 增大内边距 */
+	padding: 0px 4px; /* 增大内边距 */
 	margin-left: 10px;
+	margin-right: 0px;
 }
 
 #tray {

@@ -50,7 +50,7 @@
 		  "title<IDA v.*>": " ",
 		  "class<localsend>": " ",
 		  "title<FreeRDP: 127.0.0.1|vim6k|nvid6k>": " ",
-		  "class<gemini|qwen|deepseek>": " 󰚩", //  󰋞 
+		  "class<gemini|qwen|deepseek>": " 󰚩", //  󰋞  
 		  "class<android-studio>": " ", //  󰀲
 		  // "class<010 Editor>": " ",  // 添加010editor图标
 		  "class<pycharm>": " ",
@@ -125,7 +125,7 @@
 	  "format": "<span size='13000'>{icon}</span> <span size='9200' baseline_shift='2000'>{capacity}%</span>",
 	  "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 	  "format-full": "<span size='13000'>{icon}</span> <span size='9200' baseline_shift='2000'>{capacity}%</span>",
-	  "format-charging": "<span size='13000'>⚡</span> <span size='9200' baseline_shift='2000'>{capacity}%</span>",
+	  "format-charging": "<span size='13000'>󰂄</span> <span size='9200' baseline_shift='2000'>{capacity}%</span>", // ⚡
 	  // "format": "{icon} {capacity}%",
 	  // "format-full": "{icon} {capacity}%",
 	  // "format-charging": "󰂄 {capacity}%",
