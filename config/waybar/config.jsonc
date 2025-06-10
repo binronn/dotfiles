@@ -30,9 +30,9 @@
 	  "on-scroll-up": "hyprctl dispatch workspace e+1",
 	  "on-scroll-down": "hyprctl dispatch workspace e-1",
 	  "format-window-separator": "",
-	  "window-rewrite-default": "",
-	  "window-rewrite": {
-		  "class<zen-browser>": " ", // 
+	  "window-rewrite-default": "", //    
+	  "window-rewrite": { 
+		  "class<zen-browser>": " ", //   
 		  "class<Thunar>": " ",
 		  "class<org.gnome.FileRoller>": " ",
 		  "class<kitty>": " ",
@@ -42,16 +42,16 @@
 		  "class<vlc>": " 󰕼",
 		  "class<eog>": " ",
 		  "class<google-chrome>": " ", // 
-		  "class<wechat>": " ",
+		  "class<wechat>": " ", // 
 		  "class<netease-cloud-music>": " ",
 		  "class<AlgerMusicPlayer>": " ",
 		  "class<firefox>": " ",
 		  "class<org.telegram.desktop>": " ", // 
 		  "title<IDA v.*>": " ",
-		  "class<localsend>": " ",
+		  "class<localsend>": " ", //           
 		  "title<FreeRDP: 127.0.0.1|vim6k|nvid6k>": " ",
-		  "class<gemini|qwen|deepseek>": " 󰚩", //  󰋞  
-		  "class<android-studio>": " ", //  󰀲
+		  "class<gemini|qwen|deepseek>": " ", //  󰋞  󰚩  ﮧ 󱓟 
+		  "class<android-studio>": " ", //  󰀲 
 		  // "class<010 Editor>": " ",  // 添加010editor图标
 		  "class<pycharm>": " ",
 		  "class<teams>": " ",
@@ -113,7 +113,6 @@
 	// "format": "{icon} {percent}%",
 	"format": "<span size='13000'>{icon}</span> <span size='9200' baseline_shift='2000'>{percent}%</span>",
 	"format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
-	"on-click": "", // 有这个选项，鼠标移动到按钮上会变成手的形状
 	"tooltip": false
   },
   "battery": {

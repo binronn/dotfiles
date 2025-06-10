@@ -39,7 +39,8 @@ if echo "$CONNECTED_MONITORS" | grep -q "$EXTERNAL_MONITOR"; then
 	sleep 5
 	echo 'Xft.dpi:0' | xrdb -merge -
 
-# else
+else
+    hyprctl keyword monitor "$MAIN_MONITOR,enable"
     # 启用主显示器，并应用其默认配置
     # hyprctl keyword monitor "$MAIN_MONITOR,$MAIN_MONITOR_CONFIG"
 fi

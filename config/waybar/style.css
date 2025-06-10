@@ -39,7 +39,7 @@ tooltip label,
 	color: #a9b1d6;
 	padding: 0px 10px; /* 增大内边距 */
 	margin: 2px;
-	background-color: #2a2e3c; /* 添加背景颜色 */
+	background: rgba(42, 46, 60, 0.8);
 	transition: all 0.3s ease; /* 添加平滑过渡效果 */
 }
 
@@ -113,7 +113,7 @@ tooltip label,
 #clock {
 	/* background-color: #A64902; */
 	color: #c8c8c8;
-	background-color: #2a2e3c; /* 添加背景颜色 */
+	background: rgba(42, 46, 60, 1);
 	padding: 4px 12px; /* 增大内边距 */
 	margin-left: 10px;
 }
@@ -134,6 +134,9 @@ tooltip label,
 	margin-right: 10px;
 }
 
+#workspaces {
+	background-color: rgba(42, 46, 60, 0.8);;
+}
 #workspaces button {
 	background: #1a1b26;
 	color: #a9b1d6;
